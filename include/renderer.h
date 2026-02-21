@@ -18,6 +18,8 @@ namespace Renderer {
     void DrawSidebar(const UI::SidebarState& sidebar_state, const Font &gameFont);
 
     void DrawPlayers(const std::vector<Player>& players);
+
+    void DrawDice(int value, float offset = 0, Color color = BEIGE);
 }
 
 #endif //OPENPLOTS_RENDERER_H

@@ -15,6 +15,7 @@ namespace Config {
 
     constexpr int TOTAL_SPACES = 40;
     constexpr float BOARD_SIZE = SCREEN_HEIGHT - PADDING * 2;
+    constexpr float INNER_BOARD_PADDING = (BOARD_SIZE / 12.0f) * 1.5f;
 
     constexpr Color COLOR_BACKGROUND = {21, 21, 21, 255};
     constexpr auto COLOR_FOREGROUND = LIGHTGRAY;

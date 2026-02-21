@@ -7,7 +7,7 @@
 #include <sstream>
 
 #include "constants.h"
-#include "player.h"
+#include "game.h"
 
 namespace Renderer {
     void DrawSpace(const Space& space, const int index, Font &gameFont) {
@@ -90,12 +90,11 @@ namespace Renderer {
     };
 
     void DrawBoard(const std::vector<Space> &board, const int selectedIndex, Font &gameFont) {
-        constexpr float innerPadding = (Config::BOARD_SIZE / 12.0f) * 1.5f;
         constexpr Rectangle innerBoard = {
-            20.0f + innerPadding,
-            20.0f + innerPadding,
-            Config::BOARD_SIZE - (innerPadding * 2.0f),
-            Config::BOARD_SIZE - (innerPadding * 2.0f)
+            20.0f + Config::INNER_BOARD_PADDING,
+            20.0f + Config::INNER_BOARD_PADDING,
+            Config::BOARD_SIZE - (Config::INNER_BOARD_PADDING * 2.0f),
+            Config::BOARD_SIZE - (Config::INNER_BOARD_PADDING * 2.0f)
         };
 
         DrawRectangleRec(innerBoard, (Color){ 230, 235, 220, 255 });
@@ -145,8 +144,8 @@ namespace Renderer {
             } else {
                 DrawTextEx(gameFont, "Special Interest", {cardX + 15, cardY + 90}, 15.0f, 1.0f, DARKPURPLE);
             }
-
         }
+
     }
 
     void DrawPlayers(const std::vector<Player>& players)
@@ -155,18 +154,38 @@ namespace Renderer {
         {
             if (player.isBankrupt) continue;
 
-            Rectangle rect = GetSpaceRect(player.position);
+            auto [x, y, width, height] = GetSpaceRect(player.position);
 
-            float offsetX = (player.id % 2 == 0) ? -10.0f : 10.0f;
-            float offsetY = (player.id < 2) ? -10.0f : 10.0f;
+            DrawCircleV(player.visualPos, 8.0f, player.color);
+            DrawCircleLinesV(player.visualPos, 8.0f, BLACK);
+        }
+    }
 
-            Vector2 tokenPos = {
-                rect.x + rect.width / 2.0f + offsetX,
-                rect.y + rect.height / 2.0f + offsetY
-            };
-
-            DrawCircleV(tokenPos, 8.0f, player.color);
-            DrawCircleLinesV(tokenPos, 8.0f, BLACK);
+    void DrawDice(const int value, const float offset, Color color)
+    {
+        const float x = Config::BOARD_SIZE / 2 - 65 + Config::PADDING  + offset ;
+        constexpr float y = Config::PADDING + Config::INNER_BOARD_PADDING + 50;
+        const Rectangle rec = {x, y, 50, 50};
+        constexpr float dice_padding = 12.0f;
+        DrawRectangleRounded(rec, 0.4f, 0, color);
+        if (value > 1)
+        {
+            DrawCircle(x + dice_padding, y + dice_padding, 5.0f, BLACK);
+            DrawCircle(x + 50 - dice_padding, y + 50 - dice_padding, 5.0f, BLACK);
+        }
+        if (value > 3)
+        {
+            DrawCircle(x + 50 - dice_padding, y + dice_padding, 5.0f, BLACK);
+            DrawCircle(x + dice_padding, y + 50 - dice_padding, 5.0f, BLACK);
+        }
+        if (value > 5)
+        {
+            DrawCircle(x + dice_padding, y + 25, 5.0f, BLACK);
+            DrawCircle(x + 50 - dice_padding, y + 25, 5.0f, BLACK);
+        }
+        if (value % 2 != 0)
+        {
+            DrawCircle(x + 25, y + 25, 5.0f, BLACK);
         }
     }
 }

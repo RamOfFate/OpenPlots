@@ -15,8 +15,8 @@ add_executable(OpenPlots main.cpp
         src/renderer.cpp
         include/ui.h
         src/ui.cpp
-        include/player.h
-        src/game_logic.cpp
+        src/game.cpp
+        include/game.h
 )
 
 target_link_libraries(OpenPlots raylib m dl pthread)
