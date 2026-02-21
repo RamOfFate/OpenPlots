@@ -5,9 +5,16 @@
 #ifndef OPENPLOTS_RENDERER_H
 #define OPENPLOTS_RENDERER_H
 
-// TODO: Create functionality to draw the background and the board grid
-// TODO: Create functionality to draw the property cards in the sidebar when selected
-// TODO: Create functionality to draw the player tokens using their visual coordinates
-// TODO: Create functionality to draw the dice faces based on the last roll
+namespace Renderer
+{
+    // TODO: Create functionality to draw the background and the board grid
+    void DrawBoard();
+    // TODO: Create functionality to draw the property cards in the sidebar when selected
+    void DrawSidebar();
+    // TODO: Create functionality to draw the player tokens using their visual coordinates
+    // TODO: Create functionality to draw the dice faces based on the last roll
+
+    void DrawDice(Color dice_color, int dice1, int dice2);
+}
 
 #endif //OPENPLOTS_RENDERER_H

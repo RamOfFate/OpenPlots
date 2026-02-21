@@ -18,6 +18,11 @@ add_executable(OpenPlots main.cpp
         src/game.cpp
         include/game.h
         include/player.h
+        include/input.h
+        src/input.cpp
+        include/space.h
+        include/board_loader.h
+        src/board_loader.cpp
 )
 
 target_link_libraries(OpenPlots raylib m dl pthread)

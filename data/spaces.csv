@@ -1,0 +1,41 @@
+Name,Price,HousePrice,Rent,HouseRent,Color,Type
+Go,0,0,0,0,255-255-255-255,Special
+Mediterranean Avenue,60,50,2,10,149-84-165-255,Property
+Community Chest,0,0,0,0,255-255-255-255,Special
+Baltic Avenue,60,50,4,20,149-84-165-255,Property
+Income Tax,0,0,0,0,255-255-255-255,Special
+Reading Railroad,200,0,25,0,0-0-0-255,Railroad
+Oriental Avenue,100,50,6,30,170-224-250-255,Property
+Chance,0,0,0,0,255-255-255-255,Special
+Vermont Avenue,100,50,6,30,170-224-250-255,Property
+Connecticut Avenue,120,50,8,40,170-224-250-255,Property
+Just Visiting,0,0,0,0,255-255-255-255,Special
+St. Charles Place,140,100,10,50,217-58-150-255,Property
+Electric Company,150,0,0,0,255-255-255-255,Utility
+States Avenue,140,100,10,50,217-58-150-255,Property
+Virginia Avenue,160,100,12,60,217-58-150-255,Property
+Pennsylvania Railroad,200,0,25,0,0-0-0-255,Railroad
+St. James Place,180,100,14,70,247-148-29-255,Property
+Community Chest,0,0,0,0,255-255-255-255,Special
+Tennessee Avenue,180,100,14,70,247-148-29-255,Property
+New York Avenue,200,100,16,80,247-148-29-255,Property
+Free Parking,0,0,0,0,255-255-255-255,Special
+Kentucky Avenue,220,150,18,90,237-27-36-255,Property
+Chance,0,0,0,0,255-255-255-255,Special
+Indiana Avenue,220,150,18,90,237-27-36-255,Property
+Illinois Avenue,240,150,20,100,237-27-36-255,Property
+B.&O. Railroad,200,0,25,0,0-0-0-255,Railroad
+Atlantic Avenue,260,150,22,110,254-242-0-255,Property
+Ventnor Avenue,260,150,22,110,254-242-0-255,Property
+Water Works,150,0,0,0,255-255-255-255,Utility
+Marvin Gardens,280,150,24,120,254-242-0-255,Property
+Go To Jail,0,0,0,0,255-255-255-255,Special
+Pacific Avenue,300,200,26,130,31-177-90-255,Property
+North Carolina Avenue,300,200,26,130,31-177-90-255,Property
+Community Chest,0,0,0,0,255-255-255-255,Special
+Pennsylvania Avenue,320,200,28,150,31-177-90-255,Property
+Short Line,200,0,25,0,0-0-0-255,Railroad
+Chance,0,0,0,0,255-255-255-255,Special
+Park Place,350,200,35,175,0-114-187-255,Property
+Luxury Tax,0,0,0,0,255-255-255-255,Special
+Boardwalk,400,200,50,200,0-114-187-255,Property
