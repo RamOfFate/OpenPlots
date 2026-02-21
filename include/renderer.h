@@ -5,21 +5,9 @@
 #ifndef OPENPLOTS_RENDERER_H
 #define OPENPLOTS_RENDERER_H
 
-#include "board.h"
-#include "ui.h"
-
-struct Player;
-
-namespace Renderer {
-    void DrawBoard(const std::vector<Space> &board, int selectedIndex, Font &gameFont);
-
-    void DrawSpace(const Space& space, int index, Font &gameFont);
-
-    void DrawSidebar(const UI::SidebarState& sidebar_state, const Font &gameFont);
-
-    void DrawPlayers(const std::vector<Player>& players);
-
-    void DrawDice(int value, float offset = 0, Color color = BEIGE);
-}
+// TODO: Create functionality to draw the background and the board grid
+// TODO: Create functionality to draw the property cards in the sidebar when selected
+// TODO: Create functionality to draw the player tokens using their visual coordinates
+// TODO: Create functionality to draw the dice faces based on the last roll
 
 #endif //OPENPLOTS_RENDERER_H

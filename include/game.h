@@ -4,43 +4,12 @@
 
 #ifndef OPENPLOTS_GAME_LOGIC_H
 #define OPENPLOTS_GAME_LOGIC_H
-#include "raylib.h"
-#include <string>
 
-struct Player
-{
-    int id;
-    std::string name;
-    int position;
-    Vector2 visualPos;
-    int balance;
-    Color color;
-    bool isBankrupt;
-
-    Player(int id, std::string name, int pos, int bal, Color col, bool bankrupt)
-        : id(id), name(name), position(pos), balance(bal), color(col), isBankrupt(bankrupt) {
-        visualPos = { 0, 0 }; // We will set this properly in main
-    }
-};
-
-struct DiceResult {
-    int die1;
-    int die2;
-    int total;
-    bool isDouble;
-};
-
-struct GameContext {
-    std::vector<Player> players;
-    int currentPlayerIndex = 0;
-    DiceResult lastRoll = {1, 6, 2, false};
-    bool canRoll = true;
-};
-
-DiceResult RollDice();
-
-void MovePlayer(Player& player, int steps);
-
-
+// TODO: Create a container for the game state
+// TODO: This should hold the list of players and the index of the current turn
+// TODO: Implement the logic to roll two dice and return the results
+// TODO: Implement the logic to update a player's logical position on the board
+// TODO: Implement the "Lerp" math to move the visual position toward the logical position
+//       (This needs to use Delta Time to stay smooth)
 
 #endif //OPENPLOTS_GAME_LOGIC_H
