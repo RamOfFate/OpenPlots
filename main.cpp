@@ -18,6 +18,7 @@
 #include "input.h"
 #include "raylib.h"
 #include "renderer.h"
+#include "ui.h"
 
 int main()
 {
@@ -38,6 +39,9 @@ int main()
         const float renderHeight = Config::SCREEN_HEIGHT * scale;
         const float offsetX = (currentWidth - renderWidth) / 2.0f;
         const float offsetY = (currentHeight - renderHeight) / 2.0f;
+
+        std::vector<Rectangle> buttons = UI::getButtons();
+        UI::UpdateCursor(buttons);
 
         BeginTextureMode(target);
         ClearBackground(Config::BACKGROUND_COLOR);

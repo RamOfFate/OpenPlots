@@ -1,6 +1,8 @@
 
 #include "constants.h"
+#include "input.h"
 #include "raylib.h"
+#include "ui.h"
 
 namespace Renderer
 {

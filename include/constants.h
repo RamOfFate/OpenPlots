@@ -5,6 +5,7 @@
 #ifndef OPENPLOTS_CONSTANTS_H
 #define OPENPLOTS_CONSTANTS_H
 
+
 #include "raylib.h"
 
 namespace Config
@@ -58,4 +59,5 @@ namespace Config
         DICE_SIZE
     };
 }
+
 #endif //OPENPLOTS_CONSTANTS_H

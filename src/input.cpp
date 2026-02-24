@@ -39,6 +39,6 @@ namespace Input
 
     bool isClicked(const Rectangle bounds)
     {
-        return (isHovered(bounds) && IsMouseButtonPressed(1));
+        return (isHovered(bounds) && IsMouseButtonPressed(0));
     }
 }
